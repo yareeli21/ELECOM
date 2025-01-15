@@ -1,0 +1,102 @@
+
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600&display=swap");
+
+/* Variables - mantenemos las existentes */
+:root {
+  --header-height: 3rem;
+  --first-color: #64B5F6;
+  --first-color-lighter: #ecf3f2;
+  --title-color: #5C6BC0;
+  --text-color: #9FA8DA;
+  --body-color: #f5fffe;
+  --body-font: "Poppins", sans-serif;
+  --biggest-font-size: 2.5rem;
+  --big-font-size: 1.5rem;
+  --normal-font-size: .9rem;
+  --font-medium: 500;
+  --font-semi-bold: 600;
+  --z-tooltip: 10;
+  --z-fixed: 100;
+  --input-border: #64B5F6;
+  --button-color: #5C6BC0;
+  --button-hover: #3F51B5;
+  --text-input-color: #3C4858;
+}
+@media screen and (min-width: 1024px) {
+  :root {
+      --normal-font-size: 1rem;
+      --biggest-font-size: 3.5rem;
+      --big-font-size: 2rem;
+  }
+}
+
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    display: flex;
+    height: 100vh;
+}
+.left-section {
+    background: #5C6BC0;
+    color: white;
+    width: 50%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+.left-section h1 {
+    margin-bottom: 10px;
+}
+.left-section p {
+    margin-bottom: 20px;
+}
+.left-section a {
+    text-decoration: none;
+}
+.left-section button {
+    background: white;
+    color: #5C6BC0;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 20px;
+    cursor: pointer;
+    font-weight: bold;
+}
+.right-section {
+    width: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.form-container {
+    text-align: center;
+    max-width: 350px;
+    width: 100%;
+}
+.form-container h2 {
+    margin-bottom: 20px;
+}
+.form-container input {
+    width: 100%;
+    padding: 10px;
+    margin: 10px 0;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+.form-container button {
+    background: #5C6BC0;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+    margin-top: 10px;
+}
+.form-container a {
+    text-decoration: none;
+    color: #5C6BC0;
+    display: block;
+    margin-top: 15px;
+}

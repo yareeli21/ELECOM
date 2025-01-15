@@ -1,0 +1,76 @@
+/* Estilos para la tabla de Material Disponible */
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 20px;
+}
+th, td {
+    border: 1px solid #dee2e6;
+    padding: 8px;
+    text-align: center;
+}
+th {
+    background-color: #1d4b7f;
+    color: #ffffff;
+}
+td {
+    background-color: #dbe4f2;
+}
+.vendor-info {
+    text-align: left;
+    padding: 10px;
+}
+.vendor-info img {
+    width: 80px;
+    height: 80px;
+    border: 1px solid #000;
+    display: block;
+    margin: 0 auto 10px;
+}
+.vendor-info label {
+    font-weight: bold;
+    display: block;
+}
+
+/* Hacer que la tabla sea más pequeña en pantallas más pequeñas */
+@media (max-width: 768px) {
+    table {
+        width: 100%;
+        font-size: 14px;
+        overflow-x: auto;
+        display: block;
+    }
+
+    th, td {
+        padding: 6px;
+    }
+
+    .vendor-info {
+        text-align: left;
+        padding: 10px;
+        font-size: 14px;
+    }
+
+    .vendor-info img {
+        width: 60px;
+        height: 60px;
+        margin: 0 auto 10px;
+    }
+}
+
+/* Para pantallas muy pequeñas (móviles) */
+@media (max-width: 480px) {
+    table {
+        font-size: 12px;
+    }
+
+    th, td {
+        padding: 5px;
+    }
+
+    .vendor-info img {
+        width: 50px;
+        height: 50px;
+    }
+}

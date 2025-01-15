@@ -1,0 +1,349 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600&display=swap");
+
+/* Variables - mantenemos las existentes */
+:root {
+  --header-height: 3rem;
+  --first-color: #64B5F6;
+  --first-color-lighter: #ecf3f2;
+  --title-color: #5C6BC0;
+  --text-color: #9FA8DA;
+  --body-color: #f5fffe;
+  --body-font: "Poppins", sans-serif;
+  --biggest-font-size: 2.5rem;
+  --big-font-size: 1.5rem;
+  --normal-font-size: .9rem;
+  --font-medium: 500;
+  --font-semi-bold: 600;
+  --z-tooltip: 10;
+  --z-fixed: 100;
+  --input-border: #64B5F6;
+  --button-color: #5C6BC0;
+  --button-hover: #3F51B5;
+  --text-input-color: #3C4858;
+}
+@media screen and (min-width: 1024px) {
+  :root {
+      --normal-font-size: 1rem;
+      --biggest-font-size: 3.5rem;
+      --big-font-size: 2rem;
+  }
+}
+/* Reset general */
+img {
+  margin: 0;
+  padding: 0;
+  width: 150px; 
+  
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  text-decoration: none;
+  font-family: 'Poppins', sans-serif;
+}
+
+.max-width{
+  max-width: 90%;
+  padding: 0 20px;
+  margin: auto;
+  box-sizing: border-box;
+}
+
+.max-width p {
+  /* Estilo para los párrafos dentro del contenedor */
+  width: 100%; /* Asegúrate que los párrafos ocupen todo el ancho disponible */
+}
+
+.navbar {
+  position: relative;
+  width: 100%;
+  padding: 20px 0;
+  padding-top: 10px;
+  font-weight: var(--font-semi-bold);
+    font-family: var(--body-font);
+    font-size: var(--normal-font-size);
+  background-color: #5C6BC0; /* El color morado del header */
+ /* z-index: 999;*/
+ transition: all .3s ease;
+  z-index: 100;
+}
+/*
+.navbar {
+    position: relative;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 999; /* Asegúrate de que esté por encima de otros elementos *//*
+    transition: all 0.3s ease; /* Para una transición suave */
+  /*}
+  
+  .relative {
+    background-color: #fff; /* Cambia el color de fondo si lo deseas */
+   /* box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.3); /* Agrega una sombra para destacar */
+  /*}*/
+.navbar.sticky{
+  padding: 10px 0;
+  padding-top: 10px;
+  background: var(--title-color);
+}
+.navbar .max-width{
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.navbar .logo a{
+  color: var(--first-color-lighter);
+  font-size: var(--big-font-size);
+  font-weight: var(--font-semi-bold);
+}
+
+.navbar.sticky .logo a span{
+  color: var(--first-color-lighter);
+}
+/* Para el texto normal del logo */
+.logo a {
+  color: #fff;
+}
+
+/* Para las partes "ew", "ech", "hop" del logo */
+.logo a span {
+  color: #fff;
+  font-weight: 600;
+}
+
+/* Para las letras "N", "T", "S" del logo */
+.logo a:not(span) {
+  font-weight: 600;
+}
+
+/* Para el menú */
+.menu {
+  display: flex;
+  list-style: none;
+  gap: 2rem;
+}
+
+.menu .nav_link {
+  color: #fff;
+  text-decoration: none;
+  font-size: var(--normal-font-size);
+  font-weight: var(--font-medium);
+  margin-left: 25px;
+  transition: color 0.3s ease;
+}
+
+/* Ocultar el botón de menú en pantallas grandes */
+.menu-btn {
+  display: none;
+}
+
+/*ahora para la tabla pequeña*/
+
+.info-table {
+  font-family: var(--body-font);
+  margin: 20px;
+  width: 300px; /* Ancho ajustado para que sea similar a la imagen */
+}
+
+.info-table table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+.info-table th {
+  background-color: #5C6BC0; /* Color azul similar al de la imagen */
+  color: white;
+  padding: 8px;
+  text-align: left;
+  border: 1px solid #FFFFFF;
+}
+
+.info-table td {
+  padding: 8px;
+  border: 1px solid #FFFFFF;
+}
+
+.info-table tr:nth-child(odd) td {
+  background-color: #DCE6F1; /* Color azul claro para filas impares */
+}
+
+.info-table tr:nth-child(even) td {
+  background-color: #E9EEF5; /* Color azul más claro para filas pares */
+}
+
+/*ahora para el formulario*/
+/* Estilos para el título */
+
+h2{
+  font-family:var(--body-font);
+  font-size: var(--big-font-size);;
+  color: #5C6BC0;
+}
+
+.register-title {
+  text-align: center;
+  color: #5C6BC0;
+  font-size: 10px;
+  margin: 20px 0;
+  font-family: var(--body-font);
+}
+
+/* Contenedor principal del formulario */
+.register-container {
+  max-width: 1200px;
+  margin: 15px auto;
+  padding: 20px;
+}
+.form-wrapper {
+  display: flex;
+  flex-direction: column; /* Stack form elements vertically */
+  justify-content: center; /* Center form vertically within .form-wrapper */
+  align-items: center; /* Center form horizontally within .form-wrapper */
+  padding: 20px; /* Add padding for margins */
+  width: 100%;
+  max-width: 800px;  /* match container width */
+  margin: 0 auto;
+}
+
+/* Estilos del formulario */
+#register-form {
+  background-color: #E9EEF5;
+  padding: 40px;
+  border: 3px solid #5C6BC0;
+  border-radius: 3px;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 20px;
+}
+
+/* Grupos de formulario */
+.form-group {
+  margin-bottom: 15px;
+}
+
+/* Etiquetas */
+.form-group label {
+  display: block;
+  margin-bottom: 5px;
+  color: #5C6BC0;
+  font-weight: bold;
+  font-family: var(--body-font);
+}
+
+/* Inputs y selects */
+.form-group input,
+.form-group select {
+  width: 80%;
+  padding: 10px;
+  border: 2px solid #5C6BC0;
+  border-radius: 3px;
+  font-size: --normal-font-size;
+}
+
+/* Estilo específico para los selects */
+.form-group select {
+  appearance: none;
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='12' height='12' viewBox='0 0 12 12'%3E%3Cpath fill='%232F4F8A' d='M6 8L1 3h10z'/%3E%3C/svg%3E");
+  background-repeat: no-repeat;
+  background-position: right 8px center;
+  background-color: white;
+  padding-right: 50px;
+}
+
+/* Input tipo file personalizado */
+.form-group input[type="file"] {
+  border: none;
+  padding: 0;
+}
+
+.upload-button {
+  display: inline-block;
+  padding: 8px;
+  border: 2px solid #5C6BC0;
+  border-radius: 3px;
+  background-color: white;
+  cursor: pointer;
+  width: 60%;
+  text-align: left;
+}
+
+.upload-icon {
+  float: right;
+  width: 20px;
+  height: 20px;
+}
+
+/* Botón de registro */
+#register-btn {
+  grid-column: 2;
+  justify-self: end;
+  padding: 10px 30px;
+  background-color: #5C6BC0;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  font-weight: bold;
+}
+
+
+@media (max-width: 947px) {
+  .max-width {
+      padding: 0 50px;
+  }
+  .menu-btn {
+      display: block;
+      z-index: 999;
+      color: #fff;
+      font-size: 23px;
+      cursor: pointer;
+  }
+  .menu {
+      position: fixed;
+      height: 100vh;
+      width: 100%;
+      left: -100%;
+      top: 0;
+      background: #5C6BC0;
+      text-align: center;
+      padding-top: 80px;
+      transition: all 0.3s ease;
+      flex-direction: column;
+  }
+  .menu.active {
+      left: 0;
+  }
+
+  .table-container {
+    position: static;
+    margin: 20px auto;
+  }
+  #register-form {
+    grid-template-columns: 1fr;
+}
+
+#register-btn {
+    grid-column: 1;
+}
+}
+
+/* Footer mejorado */
+footer {
+  background: var(--first-color-lighter);
+  padding: 1.5rem;
+  text-align: center;
+  margin-top: auto;
+}
+
+footer span a {
+  color: var(--title-color);
+  font-weight: var(--font-medium);
+}
+
+footer span a:hover {
+  text-decoration: underline;
+}
+

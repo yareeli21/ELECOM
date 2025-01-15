@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Información Personal</title>
+    <script src="https://kit.fontawesome.com/64d58efce2.js" crossorigin="anonymous"></script>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/waypoints/4.0.1/jquery.waypoints.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/owl.carousel.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/typed.js/2.0.12/typed.min.js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.carousel.min.css" integrity="sha512-tS3S5qG0BlhnQROyJXvNjeEM4UpMXHrQfTGmbQ1gKmelCxlSEBUaxhRBj/EFTzpbP4RVSrpEikbmdJobCvhE3g==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="../estilos/css/styleform.css">
+</head>
+
+    <div class="scroll-up-btn">
+        <i class="fas fa-angle-up"></i>
+    </div>
+    <nav class="navbar">
+        <div class="sticky">
+            <div class="max-width">
+                <div class="logo"><a href="#">N<span>ew</span>T<span>ech</span>S<span>hop</span></a></div>
+                <div class="elecom"><img src="../imagenes/logo_elecom.jpg" alt="logo_del_proyecto"></div>
+                <ul class="menu">
+                    <li class="nav_item"><a href="../Inicio/inicio/inicio.html" class="nav_link">Inicio</a></li>
+                    <li class="nav_item"><a href="../material/listaMa.html" class="nav_link">Lista de material</a></li>
+                    <li class="nav_item"><a href="../bienvenido/Index.html" class="nav_link">Cerrar sesión</nav></a></li>
+                </ul>
+                <div class="menu-btn">
+                    <i class="fas fa-bars"></i>
+                </div>
+            </div>
+        </div>
+        
+    </nav>
+
+   
+
+        <center><h2>Información Personal</h2></center>
+    <div class="register-container">
+        <form id="register-form">
+            <div class="form-column">
+                <div class="form-group">
+                    <label for="nombre">Nombre(s):</label>
+                    <input type="text" id="nombre" name="nombre" required>
+                </div>
+                <div class="form-group">
+                    <label for="apellido-paterno">Apellido Paterno:</label>
+                    <input type="text" id="apellido-paterno" name="apellido-paterno" required>
+                </div>
+                <div class="form-group">
+                    <label for="apellido-materno">Apellido Materno:</label>
+                    <input type="text" id="apellido-materno" name="apellido-materno" required>
+                </div>
+                <div class="form-group">
+                    <label for="boleta">Boleta:</label>
+                    <input type="text" id="boleta" name="boleta" pattern=".{10}" maxlength="10" title="La boleta debe tener exactamente 10 dígitos" required>
+                </div>
+                <div class="form-group">
+                    <label for="foto-perfil">Foto de Perfil:</label>
+                    <input type="file" id="foto-perfil" name="foto-perfil" accept="image/*">
+                </div>
+            </div>
+            <div class="form-column">
+                <div class="form-group">
+                    <label for="tipo-alumno">Tipo de Alumno:</label>
+                    <select id="tipo-alumno" name="tipo-alumno" required>
+                        <option value="">Selecciona un tipo</option>
+                        <option value="Regular">Regular</option>
+                        <option value="Egresado">Egresado</option>
+                    </select>
+                </div>
+                <div class="form-group">
+                    <label for="carrera">Carrera:</label>
+                    <select id="carrera" name="carrera" required>
+                        <option value="">Selecciona una carrera</option>
+                        <option value="ISC">ISC</option>
+                        <option value="LCD">LCD</option>
+                        <option value="IIA">IIA</option>
+                    </select>
+                </div>
+                <div class="form-group">
+                    <label for="telefono">Teléfono:</label>
+                    <input type="text" id="telefono" name="telefono" pattern=".{10}" maxlength="10" title="El teléfono debe tener exactamente 10 dígitos" placeholder="1234567890" required>
+                </div>
+                <div class="form-group">
+                    <label for="email">Correo Electrónico:</label>
+                    <input type="email" id="email" name="email" required>
+                </div>
+                <div class="form-group">
+                    <label for="password">Contraseña:</label>
+                    <input type="password" id="password" name="password" pattern=".{8}" maxlength="8" title="La contraseña debe tener exactamente 8 caracteres" required>
+                </div>
+
+            </div>
+            <div>
+                <button type="submit" id="register-btn">Guardar</button>
+                <p><strong>Nota:</strong> Recuerda siempre darle "click al botón hayas o no tu información"</p>
+            </div>
+
+        </form>
+        
+    </div>
+</div>
+    
+    <footer>
+        <span>Creado por <a href="../quienesomos/quienesomos.jsp">TeamElectric</a> | <span class="fas fa-copyright"></span> 2024 Todos los derechos reservados</span>
+    </footer>
+    <script src="scriptp.js">
+ 
+    </script>
+</body>
+</html>

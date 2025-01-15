@@ -1,0 +1,304 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600&display=swap");
+
+/* Variables - mantenemos las existentes */
+:root {
+  --header-height: 3rem;
+  --first-color: #64B5F6;
+  --first-color-lighter: #ecf3f2;
+  --title-color: #5C6BC0;
+  --text-color: #9FA8DA;
+  --body-color: #f5fffe;
+  --body-font: "Poppins", sans-serif;
+  --biggest-font-size: 2.5rem;
+  --big-font-size: 1.5rem;
+  --normal-font-size: .9rem;
+  --font-medium: 500;
+  --font-semi-bold: 600;
+  --z-tooltip: 10;
+  --z-fixed: 100;
+  --input-border: #64B5F6;
+  --button-color: #5C6BC0;
+  --button-hover: #3F51B5;
+  --text-input-color: #3C4858;
+}
+@media screen and (min-width: 1024px) {
+  :root {
+      --normal-font-size: 1rem;
+      --biggest-font-size: 3.5rem;
+      --big-font-size: 2rem;
+  }
+}
+/* Reset general */
+
+img {
+  margin: 0;
+  padding: 0;
+  width: 150px; 
+  
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  text-decoration: none;
+  font-family: 'Poppins', sans-serif;
+}
+
+.max-width{
+  max-width: 90%;
+  padding: 0 20px;
+  margin: auto;
+  box-sizing: border-box;
+}
+
+.max-width p {
+  /* Estilo para los párrafos dentro del contenedor */
+  width: 100%; /* Asegúrate que los párrafos ocupen todo el ancho disponible */
+}
+
+.navbar {
+  position: relative;
+  width: 100%;
+  padding: 20px 0;
+  padding-top: 10px;
+  font-weight: var(--font-semi-bold);
+    font-family: var(--body-font);
+    font-size: var(--normal-font-size);
+  background-color: #5C6BC0; /* El color morado del header */
+ /* z-index: 999;*/
+ transition: all .3s ease;
+  z-index: 100;
+}
+/*
+.navbar {
+    position: relative;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 999; /* Asegúrate de que esté por encima de otros elementos *//*
+    transition: all 0.3s ease; /* Para una transición suave */
+  /*}
+  
+  .relative {
+    background-color: #fff; /* Cambia el color de fondo si lo deseas */
+   /* box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.3); /* Agrega una sombra para destacar */
+  /*}*/
+.navbar.sticky{
+  padding: 10px 0;
+  padding-top: 10px;
+  background: var(--title-color);
+}
+.navbar .max-width{
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.navbar .logo a{
+  color: var(--first-color-lighter);
+  font-size: var(--big-font-size);
+  font-weight: var(--font-semi-bold);
+}
+
+.navbar.sticky .logo a span{
+  color: var(--first-color-lighter);
+}
+/* Para el texto normal del logo */
+.logo a {
+  color: #fff;
+}
+
+/* Para las partes "ew", "ech", "hop" del logo */
+.logo a span {
+  color: #fff;
+  font-weight: 600;
+}
+
+/* Para las letras "N", "T", "S" del logo */
+.logo a:not(span) {
+  font-weight: 600;
+}
+
+/* Para el menú */
+.menu {
+  display: flex;
+  list-style: none;
+  gap: 2rem;
+}
+
+.menu .nav_link {
+  color: #fff;
+  text-decoration: none;
+  font-size: var(--normal-font-size);
+  font-weight: var(--font-medium);
+  margin-left: 25px;
+  transition: color 0.3s ease;
+}
+
+/* Ocultar el botón de menú en pantallas grandes */
+.menu-btn {
+  display: none;
+}
+
+/*para el logo*/
+/* Logo container styles */
+.bonis {
+    width: 100%;
+    padding: 20px 0;  /* Space above and below the logo */
+    margin-top: 60px; /* Distance from header, adjust based on your header height */
+    text-align: center; /* This replaces the <center> tag which is deprecated */
+}
+
+/* Logo image styles */
+.bonis img {
+    width: auto;      /* Maintains aspect ratio */
+    height: 150px;    /* You can adjust this value to your preferred size */
+    max-width: 100%;  /* Ensures responsiveness */
+    display: block;   /* Removes any extra space below the image */
+    margin: 0 auto;   /* Centers the image horizontally */
+}
+
+/* Media query for smaller screens */
+@media screen and (max-width: 768px) {
+    .bonis img {
+        height: 100px; /* Smaller size for mobile devices */
+    }
+    
+    .bonis {
+        margin-top: 40px; /* Less space on mobile */
+        padding: 10px 0;
+    }
+}
+
+/* Media query for very small screens */
+@media screen and (max-width: 480px) {
+    .bonis img {
+        height: 80px; /* Even smaller for very small devices */
+    }
+}
+
+.button-group {
+    display: flex;
+    justify-content: center;
+    gap: 20px; /* Space between buttons */
+    margin-bottom: 30px; /* Space below the button group */
+}
+
+.main-btn {
+    display: inline-block; /* Allows padding and margin to be applied */
+    padding: 12px 25px; /* Vertical and horizontal padding */
+    border: none; /* Remove border */
+    border-radius: 5px; /* Rounded corners */
+    cursor: pointer; /* Pointer cursor on hover */
+    font-weight: bold; /* Bold text */
+    text-align: center; /* Center text */
+    text-decoration: none; /* Remove underline from links */
+    transition: opacity 0.3s; /* Smooth opacity transition */
+}
+
+.add-btn {
+    background-color: #4CAF50; /* Green for Add */
+    color: white; /* White text */
+}
+
+.modify-btn {
+    background-color: #2196F3; /* Blue for Modify */
+    color: white; /* White text */
+}
+
+.delete-btn {
+    background-color: #f44336; /* Red for Delete */
+    color: white; /* White text */
+}
+
+.main-btn:hover {
+    opacity: 0.8; /* Slightly fade button on hover */
+}
+
+/* Table Styles */
+.materials-table {
+    overflow-x: auto;
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+    background-color: white;
+    box-shadow: 0 1px 3px rgba(0,0,0,0.2);
+}
+
+th, td {
+    padding: 12px;
+    text-align: left;
+    border-bottom: 1px solid #ddd;
+}
+
+th {
+    background-color: #5C6BC0;
+    color: white;
+}
+
+tr:hover {
+    background-color: #f5f5f5;
+}
+
+tr.selected {
+    background-color: #e3f2fd;
+}
+
+/* Footer mejorado */
+/*footer {
+  background: var(--first-color-lighter);
+  padding: 1.5rem;
+  text-align: center;
+  margin-top: auto;
+}
+  */
+.main-content {
+  flex: 1; /* Esto hará que el contenido ocupe todo el espacio disponible */
+}
+
+/* Footer */
+footer {
+  background-color: #f1f1f1;
+  padding: 10px;
+  text-align: center;
+}
+
+footer span a {
+  color: var(--title-color);
+  font-weight: var(--font-medium);
+}
+
+footer span a:hover {
+  text-decoration: underline;
+}
+
+/* Estilos para el cuadro informativo */
+.info-box {
+  background-color: #E3F2FD; /* Azul muy claro */
+  border: 2px solid #64B5F6; /* Borde azul */
+  border-radius: 5px;
+  padding: 20px;
+  margin: 20px auto;
+  max-width: 90%;
+  font-family: var(--body-font);
+}
+
+.info-box-title {
+  color: #5C6BC0;
+  font-size: var(--normal-font-size);
+  margin-bottom: 15px;
+}
+
+.info-box-list {
+  margin-left: 20px;
+  color: #3C4858;
+}
+
+.info-box-list li {
+  margin-bottom: 10px;
+  line-height: 1.4;
+  font-size: var(--normal-font-size);
+}

@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Consultar Material</title>
+    <script src="https://kit.fontawesome.com/64d58efce2.js" crossorigin="anonymous"></script>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/waypoints/4.0.1/jquery.waypoints.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/owl.carousel.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/typed.js/2.0.12/typed.min.js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.carousel.min.css" integrity="sha512-tS3S5qG0BlhnQROyJXvNjeEM4UpMXHrQfTGmbQ1gKmelCxlSEBUaxhRBj/EFTzpbP4RVSrpEikbmdJobCvhE3g==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="../estilos/css/agregarMa.css">
+    <link rel="stylesheet" href="../estilos/css/consultarMa.css">
+</head>
+
+
+<body>
+    <div class="scroll-up-btn">
+        <i class="fas fa-angle-up"></i>
+    </div>
+    <nav class="navbar">
+        <div class="sticky">
+            <div class="max-width">
+                <div class="logo"><a href="#">N<span>ew</span>T<span>ech</span>S<span>hop</span></a></div>
+                <img src="../imagenes/logo_elecom.jpg">
+                <ul class="menu">
+                    <li class="nav_item"><a href="../Inicio/inicio/inicio.html" class="nav_link">Inicio</a></li>
+                    <li class="nav_item"><a href="#" class="nav_link">Contactar al vendedor</a></li>
+                </ul>
+                <div class="menu-btn">
+                    <i class="fas fa-bars"></i>
+                </div>
+            </div>
+        </div>  
+    </nav>
+
+    <br>
+    <center><h2>Consulta de Material Electrónico</h2></center>
+
+    <div class="register-container">
+
+        <form id="register-form">
+            <div class="form-column">
+                <div class="form-group">
+                    <label for="nombre">Inserta el nombre de un material:</label>
+                    <input type="text" id="nombre" name="nombre" placeholder="¿Qué estás buscando?" maxlength="30" required>
+                </div>
+            </div>
+            <div class="form-column">                
+                <div class="form-group">
+                    <center><button type="submit" id="register-btn">Buscar</button></center>
+                </div>
+            </div>            
+        </form>
+
+        <table>
+            <thead>
+                <tr>
+                    <th>Id</th>
+                    <th>Nombre</th>
+                    <th>Imagen</th>
+                    <th>Descripción</th>
+                    <th>Estado</th>
+                    <th>Cantidad</th>
+                    <th>Costo</th>
+                    <th>Vendedor</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>1</td>
+                    <td>Producto A</td>
+                    <td><img src="ruta/a/imagen.jpg" alt="Imagen del Producto A" width="80" height="80"></td>
+                    <td>Descripción del producto A.</td>
+                    <td>Nuevo</td>
+                    <td>10</td>
+                    <td>$100.00</td>
+                    <td rowspan="7" class="vendor-info">
+                        <img src="ruta/a/foto_vendedor.jpg" alt="Foto del Vendedor">
+                        <label>Nombre:</label> <span id="vendedor-nombre">________</span><br>
+                        <label>Apellido paterno:</label> <span id="vendedor-apellido-paterno">________</span><br>
+                        <label>Apellido materno:</label> <span id="vendedor-apellido-materno">________</span><br>
+                        <label>Boleta:</label> <span id="vendedor-boleta">________</span><br>
+                        <label>Teléfono:</label> <span id="vendedor-telefono">________</span><br>
+                        <label>Email:</label> <span id="vendedor-email">________</span>
+                    </td>
+                </tr>               
+                <!-- Agrega más filas de productos según sea necesario -->
+            </tbody>
+        </table>
+    </div>
+    
+    <footer>
+        <span>Creado por <a href="../quienesomos/quienesomos.jsp">TeamElectric</a> | <span class="fas fa-copyright"></span> 2024 Todos los derechos reservados</span>
+    </footer>
+    <script src="script.js">
+    </script>
+</body>
+</html>

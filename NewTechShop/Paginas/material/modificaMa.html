@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Modificar Material</title>
+    <script src="https://kit.fontawesome.com/64d58efce2.js" crossorigin="anonymous"></script>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/waypoints/4.0.1/jquery.waypoints.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/owl.carousel.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/typed.js/2.0.12/typed.min.js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.carousel.min.css" integrity="sha512-tS3S5qG0BlhnQROyJXvNjeEM4UpMXHrQfTGmbQ1gKmelCxlSEBUaxhRBj/EFTzpbP4RVSrpEikbmdJobCvhE3g==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="../estilos/css/agregarMa.css">
+</head>
+
+
+<body>
+    <div class="scroll-up-btn">
+        <i class="fas fa-angle-up"></i>
+    </div>
+    <nav class="navbar">
+        <div class="sticky">
+            <div class="max-width">
+                <div class="logo"><a href="#">N<span>ew</span>T<span>ech</span>S<span>hop</span></a></div>
+                <img src="../imagenes/logo_elecom.jpg">
+                <ul class="menu">
+                    <li class="nav_item"><a href="../Inicio/inicio/inicio.html" class="nav_link">Inicio</a></li>
+                    <li class="nav_item"><a href="../usuario/perfil.html" class="nav_link">Perfil</a></li>
+                    <li class="nav_item"><a href="../material/listaMa.html" class="nav_link">Lista de material</a></li>
+                    <li class="nav_item"><a href="../bienvenido/Index.html" class="nav_link">Cerrar sesión</a></li>
+                </ul>
+                <div class="menu-btn">
+                    <i class="fas fa-bars"></i>
+                </div>
+            </div>
+        </div>  
+    </nav>
+
+    <br>
+    <center><h2>Modificar material</h2></center>
+
+    <div class="register-container">
+
+        <form id="register-form">
+            <div class="form-column">
+                <div class="form-group">
+                    <label for="nombre">Nombre:</label>
+                    <input type="text" id="nombre" name="nombre" placeholder="Nombre del material" maxlength="30" required>
+                </div>
+                <div class="form-group">
+                    <label for="foto-producto">Imagen:</label>
+                    <input type="file" id="foto-producto" name="foto-producto" accept="image/*">
+                </div>
+                <div class="form-group">
+                    <label for="descripcion">Descripción:</label>
+                    <!-- Puse el style aquí, debido a que no reconocía la clase. Y para no modificar el archivo CSS. -->
+                    <textarea name="message" id="descripcion" placeholder="Escribir las características del producto." maxlength="200" style="width: 80%; padding: 10px; border: 2px solid #5C6BC0; border-radius: 3px; font-size: --normal-font-size; resize: none;"></textarea>
+                </div>
+                <p><strong>Nota:</strong> Recuerda siempre darle clic al botón “Guardar”,  cambies o no tu información.</p>
+            </div>
+            <div class="form-column">
+                <div class="form-group">
+                    <label for="estado">Estado:</label>
+                    <select id="estado" name="estado" required>
+                        <option value="">Selecciona un tipo.</option>
+                        <option value="Nuevo">Nuevo</option>
+                        <option value="Semi-nuevo">Semi-nuevo</option>
+                        <option value="Usado">Usado</option>    
+                    </select>
+                </div>
+                <div class="form-group">
+                    <label for="cantidad">Cantidad:</label>
+                    <input type="number" id="cantidad" name="cantidad" min="1" max="20" placeholder="Cantidad">
+                </div>
+                <div class="form-group">
+                    <label for="precio">Costo en (pesos) $:</label>
+                    <input type="number" id="precio" name="precio" min="1" max="2000" placeholder="Precio">
+                </div>
+                <br>
+                <center><button type="submit" id="register-btn">Guardar</button></center>              
+            </div>
+        </form>
+    </div>
+</div>
+    
+    <footer>
+        <span>Creado por <a href="../quienesomos/quienesomos.jsp">TeamElectric</a> | <span class="fas fa-copyright"></span> 2024 Todos los derechos reservados</span>
+    </footer>
+    <script src="script.js">
+    </script>
+</body>
+</html>

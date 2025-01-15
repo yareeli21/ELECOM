@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lista de Material</title>
+    <script src="https://kit.fontawesome.com/64d58efce2.js" crossorigin="anonymous"></script>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/waypoints/4.0.1/jquery.waypoints.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/owl.carousel.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/typed.js/2.0.12/typed.min.js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.carousel.min.css" integrity="sha512-tS3S5qG0BlhnQROyJXvNjeEM4UpMXHrQfTGmbQ1gKmelCxlSEBUaxhRBj/EFTzpbP4RVSrpEikbmdJobCvhE3g==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="../estilos/css/stylelista.css">
+</head>
+
+    <div class="scroll-up-btn">
+        <i class="fas fa-angle-up"></i>
+    </div>
+    <nav class="navbar">
+        <div class="sticky">
+            <div class="max-width">
+                <div class="logo"><a href="#">N<span>ew</span>T<span>ech</span>S<span>hop</span></a></div>
+                <div class="elecom"><img src="../imagenes/logo_elecom.jpg" alt="logo_del_proyecto"></div>
+                <ul class="menu">
+                    <li class="nav_item"><a href="../Inicio/inicio/inicio.html" class="nav_link">Inicio</a></li>
+                    <li class="nav_item"><a href="../usuario/perfil.html" class="nav_link">Perfil</a></li>
+                    <li class="nav_item"><a href="../bienvenido/Index.html" class="nav_link">Cerrar sesión</nav></a></li>
+                </ul>
+                <div class="menu-btn">
+                    <i class="fas fa-bars"></i>
+                </div>
+            </div>
+        </div>
+        
+    </nav>
+
+    <body>
+
+       <!--<div class="bonis">
+            <center><img src="logo.png" alt="logo de la empresa"></center>
+        </div> --> 
+        <br>
+        <br>
+        <div class="button-group">
+            <a href="agregarMa.html" id="addBtn" class="main-btn add-btn">Agregar</a>
+            <a href="modificaMa.html" id="modifyBtn" class="main-btn modify-btn">Modificar</a>
+            <a href="#" id="deleteBtn" class="main-btn delete-btn">Eliminar</a>
+        </div>
+            <div class="materials-table">
+                <table>
+                    <thead>
+                        <tr>
+                            <th>ID</th>
+                            <th>Nombre</th>
+                            <th>Imagen</th>
+                            <th>Descripción</th>
+                            <th>Estado</th>
+                            <th>Cantidad</th>
+                            <th>Costo</th>
+                        </tr>
+                    </thead>
+                    <tbody id="materialsTableBody">
+                        <!-- datos aquí -->
+                    </tbody>
+                </table>
+            </div>
+        </div>
+        
+        <footer>
+            <span>Creado por <a href="../quienesomos/quienesomos.jsp">TeamElectric</a> | <span class="fas fa-copyright"></span> 2024 Todos los derechos reservados</span>
+        </footer>
+      
+        <script src="scriptlm.js"></script>
+
+    </body>
+</html>
